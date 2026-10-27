@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>TPS 生产方式咨询与精益工厂改造 | Terabox × HIRAYAMA</title>
+ <meta name="description" content="专业的 TPS 丰田生产方式 B2B 咨询服务。深入工厂现场诊断，解决生产效率低与人手不足问题，构建持续改善的 PDCA 闭环。" />
+ 
+ <!-- CDN 引入 Tailwind CSS & Geist 字体 -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-geist@1.3.0/dist/font-geist.min.css" />
+ 
+ <style>
+   body {
+     font-family: 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+   }
+ </style>
+
+ <!-- FAQ Schema (AEO / SEO 优化) -->
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+     {
+       "@type": "Question",
+       "name": "我们工厂的自动化程度较低，是否适合引入 TPS 精益生产？",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "完全适合。TPS 的核心在于消除无价值动作与流程浪费，并不依赖高昂的自动化设备。在引入颜色管理与左右配置指示书后，人效提升和换线时间缩短最为显著。"
+       }
+     },
+     {
+       "@type": "Question",
+       "name": "以前尝试过精益管理但最后不了了之，这次如何确保 PDCA 能长期固化？",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "通过建立带线员/组长防错检查、可视化 SOP 墙以及每日朝会异常追溯机制，将改善成果直接绑定到日常生产工序中，避免制度失效。"
+       }
+     }
+   ]
+ }
+ </script>
+</head>
+<body class="bg-[#181818] text-white antialiased selection:bg-neutral-700 selection:text-white">
+
+ <!-- 无障碍跳跃链接 -->
+ <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black focus:rounded-lg">
+   跳至主要内容
+ </a>
+
+ <!-- ==================== HEADER / NAVIGATION ==================== -->
+ <header class="fixed top-4 inset-x-0 z-40 max-w-5xl mx-auto px-4 sm:px-6">
+   <nav class="bg-[#1F1F1F]/80 backdrop-blur-md rounded-2xl border border-[#313131] px-6 py-3 flex items-center justify-between shadow-xl">
+     <!-- Brand Logo -->
+     <a href="#" class="flex items-center gap-3">
+       <div class="w-8 h-8 rounded-lg bg-[#272727] border border-[#313131] flex items-center justify-center font-mono font-bold text-sm text-white">
+         TPS
+       </div>
+       <span class="font-bold text-sm tracking-wide text-white">Terabox <span class="text-neutral-500 font-normal">× HIRAYAMA</span></span>
+     </a>
+
+     <!-- Desktop Links -->
+     <div class="hidden md:flex items-center gap-8 text-xs font-mono text-neutral-300">
+       <a href="#benefits" class="hover:text-white transition-colors duration-300">核心益处</a>
+       <a href="#how-it-works" class="hover:text-white transition-colors duration-300">实施路径</a>
+       <a href="#cases" class="hover:text-white transition-colors duration-300">实战案例</a>
+       <a href="#faq" class="hover:text-white transition-colors duration-300">常见问题</a>
+     </div>
+
+     <!-- CTA Button -->
+     <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white text-black font-semibold text-xs hover:bg-neutral-200 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]">
+       预约诊断
+     </a>
+   </nav>
+ </header>
+
+ <!-- ==================== MAIN CONTENT ==================== -->
+ <main id="main-content">
+
+   <!-- ==================== 1. HERO SECTION ==================== -->
+   <section class="relative bg-[#181818] text-white pt-36 pb-16 px-4 sm:px-6 lg:px-8 border-b border-[#313131] overflow-hidden">
+     <div class="max-w-[680px] mx-auto text-center">
+       
+       <!-- 权威凭证标签 -->
+       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#272727] border border-[#313131] text-xs font-mono text-neutral-300 mb-6">
+         <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+         源自丰田精益生产方式 (TPS) 现场诊断体系
+       </div>
+
+       <!-- 渐变标题 -->
+       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight bg-gradient-to-r from-[#FFFFFF] to-[#9B9B9B] bg-clip-text text-transparent text-balance leading-tight mb-6">
+         消除生产现场浪费<br class="hidden sm:inline" />打造高人效的精益工厂
+       </h1>
+
+       <!-- 副标题 -->
+       <p class="text-base sm:text-lg text-neutral-400 text-pretty mb-8 leading-relaxed">
+         专为制造与食品企业量身定制的 TPS 咨询体系。从现场隐患识别、工序换线优化（切替时间缩短 60%）到标准化 PDCA 机制固化，彻底解决人手不足与瓶颈约束。
+       </p>
+
+       <!-- 主要 CTA -->
+       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+         <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-black font-semibold text-base hover:bg-neutral-200 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#181818]">
+           预约 1:1 现场 Gemba 诊断
+         </a>
+         <a href="#cases" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#272727] text-white border border-[#313131] font-semibold text-base hover:bg-[#313131] transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98]">
+           查看 TPS 改善案例
+         </a>
+       </div>
+
+       <!-- 信任背书行 -->
+       <p class="text-xs font-mono text-neutral-500 uppercase tracking-wider mb-6">
+         已成功助力 Terabox 及多家大型制造工厂实现人效翻倍
+       </p>
+
+     </div>
+
+     <!-- 现场改善模拟示意卡片 -->
+     <div class="max-w-4xl mx-auto mt-4 p-4 sm:p-6 bg-[#1F1F1F] rounded-2xl border border-[#313131]">
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+         <div class="p-4 bg-[#181818] rounded-lg border border-[#272727]">
+           <div class="text-xs font-mono text-neutral-500 mb-1">指标一：换线（切替）时间</div>
+           <div class="text-2xl font-bold text-white mb-1">5分 ➔ 2.5分</div>
+           <div class="text-xs text-emerald-400">效率提升 50%（小批量多品种）</div>
+         </div>
+         <div class="p-4 bg-[#181818] rounded-lg border border-[#272727]">
+           <div class="text-xs font-mono text-neutral-500 mb-1">指标二：大批次配膳动线</div>
+           <div class="text-2xl font-bold text-white mb-1">8分 ➔ 2.0分</div>
+           <div class="text-xs text-emerald-400">消除 75% 无效步行浪费</div>
+         </div>
+         <div class="p-4 bg-[#181818] rounded-lg border border-[#272727]">
+           <div class="text-xs font-mono text-neutral-500 mb-1">指标三：PDCA 标准化率</div>
+           <div class="text-2xl font-bold text-white mb-1">100% 可视化</div>
+           <div class="text-xs text-neutral-400">颜色管理 + 标准作业指导书</div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- ==================== 2. TAGLINE REVEAL SECTION ==================== -->
+   <section class="bg-[#000000] text-white py-24 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-[680px] mx-auto text-center">
+       <p id="tagline-text" class="text-3xl sm:text-5xl font-bold tracking-tight leading-snug">
+         <span class="word inline-block transition-colors duration-500 text-white/30">不增加额外头衔与设备，</span>
+         <span class="word inline-block transition-colors duration-500 text-white/30">只消除看不到的浪费。</span>
+         <span class="word inline-block transition-colors duration-500 text-white/30">将精益 DNA 深度融入现场，</span>
+         <span class="word inline-block transition-colors duration-500 text-white/30">实现自主运转的持续 PDCA。</span>
+       </p>
+     </div>
+   </section>
+
+   <!-- ==================== 3. BENEFITS SECTION ==================== -->
+   <section id="benefits" class="bg-[#181818] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-6xl mx-auto">
+       
+       <div class="max-w-[680px] mx-auto text-center mb-16">
+         <h2 class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+           核心转化价值 / CORE BENEFITS
+         </h2>
+         <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-balance leading-snug">
+           从“被动对火”到“系统提效”的 4 大精益突破
+         </h3>
+       </div>
+
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+         
+         <!-- Benefit 1 -->
+         <div class="p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div class="inline-flex items-center justify-center p-3 rounded-lg bg-[#272727] text-white mb-6 border border-[#313131]">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+             </svg>
+           </div>
+           <h4 class="text-xl font-semibold mb-3 text-balance">
+             现场浪费精准可视化 — 3天诊断识别 80% 隐患
+           </h4>
+           <p class="text-sm text-neutral-400 leading-relaxed text-pretty">
+             引入 5S 与颜色标识管理（头、准备、配、金、箱）。将物料状态与工具归位直观呈现，彻底消除人员寻找与等待浪费。
+           </p>
+         </div>
+
+         <!-- Benefit 2 -->
+         <div class="p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div class="inline-flex items-center justify-center p-3 rounded-lg bg-[#272727] text-white mb-6 border border-[#313131]">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+             </svg>
+           </div>
+           <h4 class="text-xl font-semibold mb-3 text-balance">
+             快速换线 (SMED) — 切替停机时间压缩 60%
+           </h4>
+           <p class="text-sm text-neutral-400 leading-relaxed text-pretty">
+             通过多品种小批量与大批次配膳台车设计，将生产换线时间从 5-8 分钟大幅缩短至 2 分钟，显著释放现有产能。
+           </p>
+         </div>
+
+         <!-- Benefit 3 -->
+         <div class="p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div class="inline-flex items-center justify-center p-3 rounded-lg bg-[#272727] text-white mb-6 border border-[#313131]">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+             </svg>
+           </div>
+           <h4 class="text-xl font-semibold mb-3 text-balance">
+             工序左右布局重构 — 零扩招提升 30% 人均产出
+           </h4>
+           <p class="text-sm text-neutral-400 leading-relaxed text-pretty">
+             按红/绿区域制定“食材配置指示书”，消除双手交叉与无效步行，无需增加额外员工即可缓解人手不足压力。
+           </p>
+         </div>
+
+         <!-- Benefit 4 -->
+         <div class="p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div class="inline-flex items-center justify-center p-3 rounded-lg bg-[#272727] text-white mb-6 border border-[#313131]">
+             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+             </svg>
+           </div>
+           <h4 class="text-xl font-semibold mb-3 text-balance">
+             作业指导书与带线制 — 固化成果形成自主 PDCA
+           </h4>
+           <p class="text-sm text-neutral-400 leading-relaxed text-pretty">
+             建立带线员/组长防错检查与标准化 SOP 墙，确保改善经验不会因人员流动而流失，实现长效自运转。
+           </p>
+         </div>
+
+       </div>
+     </div>
+   </section>
+
+   <!-- ==================== 4. HOW IT WORKS SECTION ==================== -->
+   <section id="how-it-works" class="bg-[#181818] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-6xl mx-auto">
+       
+       <div class="max-w-[680px] mx-auto text-center mb-16">
+         <h2 class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+           实施路径 / HOW IT WORKS
+         </h2>
+         <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-balance leading-snug">
+           从现场诊断到 PDCA 自运转的 3 步落地法
+         </h3>
+         <p class="mt-4 text-base text-neutral-400 text-pretty">
+           拒绝纸上谈兵。TPS 专家亲临 Gemba（现场），带队攻坚重点生产线，将改善经验凝练为全员遵循的日常标准。
+         </p>
+       </div>
+
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+         
+         <!-- Step 01 -->
+         <div class="relative p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] flex flex-col justify-between hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div>
+             <div class="flex items-center justify-between mb-6">
+               <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-[#272727] text-neutral-300 border border-[#313131]">
+                 STEP 01
+               </span>
+               <span class="text-2xl font-mono text-neutral-500 font-bold">01/03</span>
+             </div>
+
+             <h4 class="text-xl font-semibold mb-3 text-balance">
+               现场 Gemba 深入诊断
+             </h4>
+             <p class="text-sm text-neutral-400 leading-relaxed text-pretty mb-6">
+               专家团队深入生产一线，梳理物流、人流与物料动线。运用 VSM 价值流图定位等待、搬运、过度加工等 7 大隐性浪费，输出全厂《现场浪费诊断报告》。
+             </p>
+           </div>
+
+           <div class="p-3 bg-[#181818] rounded-lg border border-[#272727] text-xs font-mono text-neutral-400">
+             <span class="text-emerald-400 font-semibold">交付物：</span>现场浪费诊断清单 & 提效潜力预估表
+           </div>
+         </div>
+
+         <!-- Step 02 -->
+         <div class="relative p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] flex flex-col justify-between hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div>
+             <div class="flex items-center justify-between mb-6">
+               <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-[#272727] text-neutral-300 border border-[#313131]">
+                 STEP 02
+               </span>
+               <span class="text-2xl font-mono text-neutral-500 font-bold">02/03</span>
+             </div>
+
+             <h4 class="text-xl font-semibold mb-3 text-balance">
+               示范线改造与换线攻坚
+             </h4>
+             <p class="text-sm text-neutral-400 leading-relaxed text-pretty mb-6">
+               选中 1 条瓶颈生产线进行试点。重构“左右食材配置指示书”（红/绿区域分区），设计配膳台车与切替标准化流程，将换线停机时间缩短 60%。
+             </p>
+           </div>
+
+           <div class="p-3 bg-[#181818] rounded-lg border border-[#272727] text-xs font-mono text-neutral-400">
+             <span class="text-emerald-400 font-semibold">交付物：</span>试点线人效提升 30% 实测验证数据
+           </div>
+         </div>
+
+         <!-- Step 03 -->
+         <div class="relative p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] flex flex-col justify-between hover:border-neutral-500 transition-colors duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
+           <div>
+             <div class="flex items-center justify-between mb-6">
+               <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-[#272727] text-neutral-300 border border-[#313131]">
+                 STEP 03
+               </span>
+               <span class="text-2xl font-mono text-neutral-500 font-bold">03/03</span>
+             </div>
+
+             <h4 class="text-xl font-semibold mb-3 text-balance">
+               颜色管理与 PDCA 机制固化
+             </h4>
+             <p class="text-sm text-neutral-400 leading-relaxed text-pretty mb-6">
+               搭建全现场可视化看板与颜色管理体系（头、准备、配、金、箱）。培训带线员与组长掌握标准 SOP 墙与每日朝会追溯机制，确保成果长久固化。
+             </p>
+           </div>
+
+           <div class="p-3 bg-[#181818] rounded-lg border border-[#272727] text-xs font-mono text-neutral-400">
+             <span class="text-emerald-400 font-semibold">交付物：</span>标准化作业指导书 (SOP) + 全员 PDCA 运行手册
+           </div>
+         </div>
+
+       </div>
+     </div>
+   </section>
+
+   <!-- ==================== 5. PROOF & CASE STUDIES SECTION ==================== -->
+   <section id="cases" class="bg-[#1F1F1F] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-6xl mx-auto">
+       
+       <div class="max-w-[680px] mx-auto text-center mb-16">
+         <h2 class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+           实战背书 / PROOF & CASE STUDIES
+         </h2>
+         <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-balance leading-snug">
+           用事实与数据说话，深耕制造现场改善
+         </h3>
+         <p class="mt-4 text-base text-neutral-400 text-pretty">
+           已服务多项工业及食品加工标杆企业，通过现场 Gemba 指导将浪费转化为可衡量的经营利润。
+         </p>
+       </div>
+
+       <!-- Logo 墙 -->
+       <div class="mb-16 p-8 bg-[#181818] rounded-2xl border border-[#313131]">
+         <div class="text-center text-xs font-mono text-neutral-500 uppercase tracking-wider mb-8">
+           信任背书合作伙伴 & 赋能企业
+         </div>
+         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
+           <div class="flex items-center justify-center p-4 bg-[#272727] rounded-lg border border-[#313131] w-full text-center">
+             <span class="text-sm font-bold font-mono tracking-wider text-neutral-300">TERABOX.JP</span>
+           </div>
+           <div class="flex items-center justify-center p-4 bg-[#272727] rounded-lg border border-[#313131] w-full text-center">
+             <span class="text-sm font-bold font-mono tracking-wider text-neutral-300">トオカツフーズ</span>
+           </div>
+           <div class="flex items-center justify-center p-4 bg-[#272727] rounded-lg border border-[#313131] w-full text-center">
+             <span class="text-sm font-bold font-mono tracking-wider text-neutral-300">JAPAN LEAN MFG</span>
+           </div>
+           <div class="flex items-center justify-center p-4 bg-[#272727] rounded-lg border border-[#313131] w-full text-center">
+             <span class="text-sm font-bold font-mono tracking-wider text-neutral-300">HIRAYAMA CONSULTING</span>
+           </div>
+         </div>
+       </div>
+
+       <!-- 详细案例 -->
+       <div class="bg-[#181818] rounded-2xl border border-[#313131] p-8 sm:p-10">
+         <div class="flex flex-col lg:flex-row gap-8 items-start justify-between">
+           
+           <div class="lg:w-1/2">
+             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#272727] border border-[#313131] text-xs font-mono text-emerald-400 mb-4">
+               标杆案例：某大型便当惣菜制造企业
+             </div>
+             <h4 class="text-2xl font-bold mb-4 text-balance">
+               小批量多品种生产线切替与配膳动线重构
+             </h4>
+             <p class="text-sm text-neutral-400 leading-relaxed text-pretty mb-6">
+               <strong>痛点</strong>：由于便当种类频繁更换，原换线停机耗时 8 分钟以上；员工配膳过程中交叉步行多，正味作业率仅为 60%。<br/><br/>
+               <strong>TPS 改善方案</strong>：引入配膳台车，重构左右食材配置指示书（红/绿区），并实施“头、准备、配、金、箱”颜色可视化管理与 SOP 墙。
+             </p>
+
+             <div class="p-4 bg-[#272727] rounded-lg border border-[#313131]">
+               <p class="text-xs text-neutral-300 italic mb-2">
+                 “柿泽顾问团队不仅帮我们把换线时间缩短了一半以上，更重要的是培养了带线员每天主动用 PDCA 追溯异常的习惯。”
+               </p>
+               <div class="text-xs font-mono text-neutral-500">— 现场生产主管 小野现场队长</div>
+             </div>
+           </div>
+
+           <!-- 数据对比 -->
+           <div class="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+             <div class="p-6 bg-[#272727] rounded-xl border border-[#313131]">
+               <div class="text-xs font-mono text-neutral-500 mb-2">小批量切替时间</div>
+               <div class="text-3xl font-bold text-white mb-1">5分 ➔ 2.5分</div>
+               <div class="text-xs text-emerald-400 font-mono">缩短 50%</div>
+             </div>
+
+             <div class="p-6 bg-[#272727] rounded-xl border border-[#313131]">
+               <div class="text-xs font-mono text-neutral-500 mb-2">大批量换线时间</div>
+               <div class="text-3xl font-bold text-white mb-1">8分 ➔ 2.0分</div>
+               <div class="text-xs text-emerald-400 font-mono">缩短 75%</div>
+             </div>
+
+             <div class="p-6 bg-[#272727] rounded-xl border border-[#313131]">
+               <div class="text-xs font-mono text-neutral-500 mb-2">正味作业率</div>
+               <div class="text-3xl font-bold text-white mb-1">60% ➔ 88%</div>
+               <div class="text-xs text-emerald-400 font-mono">提升 28 个百分点</div>
+             </div>
+
+             <div class="p-6 bg-[#272727] rounded-xl border border-[#313131]">
+               <div class="text-xs font-mono text-neutral-500 mb-2">无效步行浪费</div>
+               <div class="text-3xl font-bold text-white mb-1">近乎消除</div>
+               <div class="text-xs text-emerald-400 font-mono">左右配置指示书标准化</div>
+             </div>
+           </div>
+
+         </div>
+       </div>
+
+     </div>
+   </section>
+
+   <!-- ==================== 6. FAQ & RISK REVERSAL SECTION ==================== -->
+   <section id="faq" class="bg-[#181818] text-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-4xl mx-auto">
+       
+       <div class="max-w-[680px] mx-auto text-center mb-16">
+         <h2 class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+           消除疑虑 / FAQ & RISK REVERSAL
+         </h2>
+         <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-balance leading-snug">
+           常见问题解答与实施顾虑消除
+         </h3>
+         <p class="mt-4 text-base text-neutral-400 text-pretty">
+           透明回应关于评估周期、现场配合、PDCA 固化及 ROI 计算的每一个关键细节。
+         </p>
+       </div>
+
+       <div class="space-y-4 mb-16">
+         
+         <div class="bg-[#1F1F1F] rounded-xl border border-[#313131] overflow-hidden transition-colors duration-300">
+           <button type="button" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-neutral-400" onclick="toggleFaq(this)">
+             <span class="text-base sm:text-lg font-semibold text-balance">Q1: 我们工厂的自动化程度较低，是否适合引入 TPS 精益生产？</span>
+             <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             </svg>
+           </button>
+           <div class="hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed text-pretty border-t border-[#272727] pt-4">
+             完全适合。TPS 的核心在于“消除无价值动作与流程浪费”，并不依赖高昂的自动化设备。案例表明，半自动化或手工装配线（如便当配膳、机械组装）在引入颜色管理与左右配置指示书后，人效提升和换线时间缩短往往最为显著。
+           </div>
+         </div>
+
+         <div class="bg-[#1F1F1F] rounded-xl border border-[#313131] overflow-hidden transition-colors duration-300">
+           <button type="button" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-neutral-400" onclick="toggleFaq(this)">
+             <span class="text-base sm:text-lg font-semibold text-balance">Q2: 以前尝试过精益管理但最后不了了之，这次如何确保 PDCA 能长期固化？</span>
+             <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             </svg>
+           </button>
+           <div class="hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed text-pretty border-t border-[#272727] pt-4">
+             我们不只提供“咨询报告”，更注重“现场机制嵌入”。通过建立带线员/组长防错检查、可视化 SOP 墙以及每日朝会异常追溯机制，将改善成果直接绑定到日常生产工序中，避免因人员流动导致制度失效。
+           </div>
+         </div>
+
+         <div class="bg-[#1F1F1F] rounded-xl border border-[#313131] overflow-hidden transition-colors duration-300">
+           <button type="button" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-neutral-400" onclick="toggleFaq(this)">
+             <span class="text-base sm:text-lg font-semibold text-balance">Q3: 诊断与辅导阶段是否会影响现有的正常生产计划？</span>
+             <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             </svg>
+           </button>
+           <div class="hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed text-pretty border-t border-[#272727] pt-4">
+             不会。Gemba 现场诊断以非侵入式观察与动线测定为主；试点改造会利用换班或预定换线窗口进行快速试跑，绝不打乱既定的订单交付计划。
+           </div>
+         </div>
+
+         <div class="bg-[#1F1F1F] rounded-xl border border-[#313131] overflow-hidden transition-colors duration-300">
+           <button type="button" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-neutral-400" onclick="toggleFaq(this)">
+             <span class="text-base sm:text-lg font-semibold text-balance">Q4: TPS 咨询项目的典型服务周期是多久？费用与 ROI 如何计算？</span>
+             <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             </svg>
+           </button>
+           <div class="hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed text-pretty border-t border-[#272727] pt-4">
+             典型试点攻坚期为 1~3 个月，全厂推广及 PDCA 巩固期为 6~12 个月。我们在项目启动前会与企业共同设定量化 KPI（如切替时间缩短 50%、人均产出提升 25%），项目按阶段付费，确保投资回报清晰可见。
+           </div>
+         </div>
+
+         <div class="bg-[#1F1F1F] rounded-xl border border-[#313131] overflow-hidden transition-colors duration-300">
+           <button type="button" class="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-neutral-400" onclick="toggleFaq(this)">
+             <span class="text-base sm:text-lg font-semibold text-balance">Q5: 现场 Gemba 诊断包含哪些内容？我们需要准备什么？</span>
+             <svg class="w-5 h-5 text-neutral-400 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+             </svg>
+           </button>
+           <div class="hidden px-6 pb-6 text-sm text-neutral-400 leading-relaxed text-pretty border-t border-[#272727] pt-4">
+             诊断包括生产线拍节（Takt Time）测定、工序平衡率计算、物料配膳台车动线分析以及换线停机记录。企业仅需指定一名项目对接人并开放现场即可，无需提前整理繁复的桌面文件。
+           </div>
+         </div>
+
+       </div>
+
+       <!-- 风险逆转 -->
+       <div class="p-8 bg-[#1F1F1F] rounded-2xl border border-[#313131] text-center max-w-[680px] mx-auto">
+         <div class="inline-flex items-center justify-center p-3 rounded-full bg-[#272727] border border-[#313131] text-emerald-400 mb-4">
+           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+           </svg>
+         </div>
+         <h4 class="text-xl font-bold mb-2">零风险初诊承诺</h4>
+         <p class="text-sm text-neutral-400 leading-relaxed text-pretty">
+           首次 1:1 现场诊断若未识别出至少 3 项可量化的浪费点与提效空间，我们将不收取任何费用。
+         </p>
+       </div>
+
+     </div>
+   </section>
+
+   <!-- ==================== 7. FINAL CTA & FOOTER ==================== -->
+   <section class="bg-[#1F1F1F] text-white py-24 px-4 sm:px-6 lg:px-8 border-b border-[#313131]">
+     <div class="max-w-[680px] mx-auto text-center">
+       
+       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#272727] border border-[#313131] text-xs font-mono text-emerald-400 mb-6">
+         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+         即刻开启现场精益变革
+       </div>
+
+       <h2 class="text-3xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-[#FFFFFF] to-[#9B9B9B] bg-clip-text text-transparent text-balance leading-tight mb-6">
+         准备好消除工厂浪费，提升 30% 人均产出吗？
+       </h2>
+
+       <p class="text-base sm:text-lg text-neutral-400 text-pretty mb-8 leading-relaxed">
+         无需购置昂贵自动化设备，从现场 Gemba 诊断开始。我们将帮您在 3 天内定位隐藏浪费，并构建长久自运转的精益 PDCA 体系。
+       </p>
+
+       <div id="contact" class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+         <a href="mailto:consulting@terabox.jp?subject=预约TPS现场Gemba诊断" class="w-full inline-flex items-center justify-center px-8 py-4 rounded-lg bg-white text-black font-semibold text-base hover:bg-neutral-200 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1F1F1F]">
+           预约 1:1 现场 Gemba 诊断
+         </a>
+       </div>
+
+       <p class="mt-4 text-xs font-mono text-neutral-500">
+         * 首次诊断未识别出可量化浪费点不收取任何费用 · 零风险承诺
+       </p>
+
+     </div>
+   </section>
+
+ </main>
+
+ <!-- ==================== FOOTER ==================== -->
+ <footer class="bg-[#181818] text-neutral-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-[#313131]">
+   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+     
+     <div class="flex items-center gap-3">
+       <div class="w-8 h-8 rounded-lg bg-[#272727] border border-[#313131] flex items-center justify-center text-white font-mono font-bold text-sm">
+         TPS
+       </div>
+       <div>
+         <div class="text-sm font-bold text-white tracking-wide">Terabox × HIRAYAMA</div>
+         <div class="text-xs text-neutral-500">TPS 精益生产方式 B2B 咨询与现场改造服务</div>
+       </div>
+     </div>
+
+     <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-mono">
+       <a href="#cases" class="hover:text-white transition-colors duration-300">改善案例</a>
+       <a href="/privacy" class="hover:text-white transition-colors duration-300">隐私政策 (Privacy Policy)</a>
+       <a href="/terms" class="hover:text-white transition-colors duration-300">服务条款 (Terms of Service)</a>
+     </div>
+
+     <div class="text-xs font-mono text-neutral-500">
+       © 2026 Terabox Consulting. All Rights Reserved.
+     </div>
+
+   </div>
+ </footer>
+
+ <!-- ==================== JAVASCRIPT ==================== -->
+ <script>
+   // FAQ Toggle Interaction
+   function toggleFaq(button) {
+     const content = button.nextElementSibling;
+     const icon = button.querySelector('svg');
+     const isHidden = content.classList.contains('hidden');
+     
+     if (isHidden) {
+       content.classList.remove('hidden');
+       icon.classList.add('rotate-180');
+     } else {
+       content.classList.add('hidden');
+       icon.classList.remove('rotate-180');
+     }
+   }
+
+   // Tagline Reveal Scroll Activation (B11 规范)
+   document.addEventListener('DOMContentLoaded', () => {
+     const words = document.querySelectorAll('#tagline-text .word');
+     const observerOptions = {
+       root: null,
+       rootMargin: '0px 0px -20% 0px',
+       threshold: 0.2
+     };
+
+     const observer = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           words.forEach((word, index) => {
+             setTimeout(() => {
+               word.classList.remove('text-white/30');
+               word.classList.add('text-white');
+             }, index * 120);
+           });
+         }
+       });
+     }, observerOptions);
+
+     const taglineSection = document.getElementById('tagline-text');
+     if (taglineSection) observer.observe(taglineSection);
+   });
+ </script>
+</body>
+</html>
